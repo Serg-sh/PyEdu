@@ -7,4 +7,4 @@ observation = owm.weather_at_place(city)
 w = observation.get_weather()
 temp = w.get_temperature('celsius')['temp']
 
-print("В городе " + city + " сейчас температура: " + str(temp) + " градусов по Цельсию.")
+print("В городе", city, "сейчас температура:", temp, "градусов по Цельсию.")
