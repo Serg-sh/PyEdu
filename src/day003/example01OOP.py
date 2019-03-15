@@ -1,4 +1,7 @@
-class Person:
+from abc import *
+
+
+class Person(ABCMeta):
     name = None
     age = None
 
@@ -6,6 +9,7 @@ class Person:
         self.name = name
         self.age = age
 
+    @abstractmethod
     def set(self, name, age):
         self.name = name
         self.age = age
@@ -26,7 +30,6 @@ class Student(Person):
     def __init__(self, name=None, age=None, course=None):
         super().__init__(name, age)
         self.course = course
-
 
     def set(self, name, age, course):
         super().set(name, age)
@@ -51,6 +54,7 @@ def decorator(func):
         print('1')
         func()
         print('2')
+
     return qwerty
 
 
