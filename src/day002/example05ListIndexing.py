@@ -1,4 +1,4 @@
-import src.day003.example01OOP as Person
+
 
 digits= [1,2,3,4,5,6,7,8,9,10]
 
@@ -15,5 +15,4 @@ digits2 = range(0, 11)[::2]
 for i in digits2:
     print(i)
 
-person = Person.Person()
 
