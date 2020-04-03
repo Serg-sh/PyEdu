@@ -48,11 +48,10 @@ for card in sorted(deck, key=spades_high):
 print()
 print()
 
-
 for card in reversed(deck):
     print(card)
 
 print()
 print()
 
-print(1, 2, 3, 4, 5, sep='--')
+print(1, 2, 3, 4, 5, sep='---')
