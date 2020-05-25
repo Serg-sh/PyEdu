@@ -55,3 +55,7 @@ print()
 print()
 
 print(1, 2, 3, 4, 5, sep='---')
+
+print(Card('Q', 'hearts') in deck)
+print(Card('10', 'hearts') in deck)
+print(Card('15', 'hearts') in deck)
