@@ -6,24 +6,20 @@ from src.Udemy.multithreading.decorators import measure_time
 
 @measure_time
 def run_in_parallel(ints1, ints2):
-    for i in range(50):
-        t1 = threading.Thread(target=count_three_sum, args=(ints1, f't1 {i}'), daemon=True)
-        t2 = threading.Thread(target=count_three_sum, args=(ints2, f't2 {i}'), daemon=True)
+    t1 = threading.Thread(target=count_three_sum, args=(ints1, f't1'), daemon=True)
+    t2 = threading.Thread(target=count_three_sum, args=(ints2, f't2'), daemon=True)
 
-        t1.start()
-        t2.start()
+    t1.start()
+    t2.start()
 
-        t1.join()
-        t2.join()
-
+    t1.join()
+    t2.join()
 
 
 @measure_time
 def run_in_seq(ints1, ints2):
-    for i in range(50):
-        count_three_sum(ints1, f'main 1 {i}')
-        count_three_sum(ints2, f'main 2 {i}')
-
+    count_three_sum(ints1, f'main 1')
+    count_three_sum(ints2, f'main 2')
 
 
 if __name__ == '__main__':
