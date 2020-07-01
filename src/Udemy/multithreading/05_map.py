@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
     data = gen_lst(500)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
-        results = executor.map(count_three_sum, (data, data), ('t1', 't2'))
+        results = executor.map(count_three_sum, (data, data, data, data), ('t1', 't2', 't3', 't4'))
         for r in results:
             print(f'{r=}')
 
