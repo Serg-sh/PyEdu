@@ -3,7 +3,7 @@ from typing import List
 
 
 def gen_lst(count) -> List:
-    return [random.randint(-100000, 100000) for _ in range(count)]
+    return [random.randint(-100000, 200000) for _ in range(count)]
 
 
 def count_three_sum(ints, name_threads ='t'):
