@@ -1,6 +1,6 @@
 import asyncio
 
-import aiohttp as aiohttp
+import aiohttp
 
 from src.Udemy.multithreading.decorators import async_measure_time
 
