@@ -27,7 +27,7 @@ async def fetch_ip(service):
 
 async def main():
     coros = [fetch_ip(service) for service in services]
-    done, pending = await asyncio.wait(coros, return_when=FIRST_COMPLETED)
+    done, pending = await asyncio.wait(coros)
 
     for x in done:
         print(x.result())

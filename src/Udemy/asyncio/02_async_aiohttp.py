@@ -25,7 +25,7 @@ def print_photo_titles(photos):
 
 async def photos_by_album(task_name, album, session):
     print(f'{task_name=}')
-    url = f'https://jsonplaceholder.typicode.com/photos?albumId={album}'
+    url = f'http://jsonplaceholder.typicode.com/photos?albumId={album}'
 
     response = await session.get(url)
     photos_json = await response.json()
@@ -38,6 +38,7 @@ async def main():
     # async with aiohttp.ClientSession() as session:
     #     photos = await photos_by_album('Task 1', 3, session)
     #     print_photo_titles(photos)
+
     async with aiohttp.ClientSession() as session:
         photos = await asyncio.gather(*(photos_by_album(f'Task {i + 1}', album, session)
                                         for i, album in enumerate(range(2, 30))))
@@ -48,7 +49,7 @@ async def main():
 if __name__ == '__main__':
     # asyncio.run(main())
     loop = asyncio.get_event_loop()
-    try :
+    try:
         loop.create_task(main())
         loop.run_forever()
     finally:

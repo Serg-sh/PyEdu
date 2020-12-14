@@ -38,7 +38,7 @@ try:
             print(time_log(), '    File:', file, 'copied successful.')
 except Exception as e:
     print(time_log(), '    Script is end with error.')
-    print(time_log(), '   ', e)
+    print(time_log(), '   ', repr(e))
     print(time_log(), '   ', traceback.format_exc())
     sys.exit()
 
