@@ -15,7 +15,7 @@ if __name__ == '__main__':
     # coroutine = main()
     # print(coroutine)
     asyncio.run(main())
-    # loop = asyncio.get_event_loop()
+    # loop = _003_asyncio.get_event_loop()
     # try:
     #     loop.run_until_complete(main())
     #     print('coroutine have finished')

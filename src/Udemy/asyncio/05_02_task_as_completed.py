@@ -18,7 +18,7 @@ async def main():
     t1 = asyncio.create_task(tick())
     t2 = asyncio.create_task(tock())
 
-    # result = await asyncio.gather(t1, t2)
+    # result = await _003_asyncio.gather(t1, t2)
     # for i in enumerate(result, 1):
     #     elapsed = time.perf_counter() - start
     #     print(f'Executed {i} in {elapsed:0.2f} seconds')
