@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.getenv("BOT_TOKEN")
 admin_id = os.getenv("ADMIN_ID")
 host = os.getenv("PGHOST")
 PG_USER = os.getenv("PG_USER")

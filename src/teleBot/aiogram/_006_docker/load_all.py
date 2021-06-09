@@ -21,5 +21,5 @@ storage = MemoryStorage()
 
 bot = Bot(token=TOKEN, parse_mode="HTML")
 dp = Dispatcher(bot, storage=storage)
-
-db = dp.loop.run_until_complete(create_pool())
+loop = asyncio.get_event_loop()
+db = loop.run_until_complete(create_pool())
